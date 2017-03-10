@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2C8DED3E-111D-4272-A54A-F1865F02A90E}</ProjectGuid>
+    <RootNamespace>VolumetricFractalNoise</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(AE_PLUGIN_BUILD_DIR)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(AE_PLUGIN_BUILD_DIR)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(AE_PLUGIN_BUILD_DIR)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(AE_PLUGIN_BUILD_DIR)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.aex</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.aex</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.aex</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.aex</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\Debug/VolumetricFractalNoise.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>GLBINDING_STATIC_DEFINE;STRINGS_BY_GL;SYSTEM_WINDOWS;MSWindows;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>AE_Effect.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level1</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\;..\..\..\Headers;..\..\..\Headers\SP;..\..\..\Headers\Win;..\..\..\Resources;..\..\..\Util;..\glbinding\source\glbinding\include;..\glbinding_generated_header;..\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <ShowProgress>NotSet</ShowProgress>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>
+      </SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(IntDir)/$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\Debug/VolumetricFractalNoise.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>..\;..\..\..\Headers;..\..\..\Headers\SP;..\..\..\Headers\Win;..\..\..\Resources;..\..\..\Util;..\glbinding\source\glbinding\include;..\glbinding_generated_header;..\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>AE_Effect.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level1</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <PreprocessorDefinitions>GLBINDING_STATIC_DEFINE;STRINGS_BY_GL;SYSTEM_WINDOWS;MSWindows;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <ShowProgress>NotSet</ShowProgress>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>
+      </SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(IntDir)/$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\Debug/VolumetricFractalNoise.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\Headers;..\..\..\Headers\SP;..\..\..\Headers\Win;..\..\..\Resources;..\..\..\Util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MSWindows;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <StructMemberAlignment>4Bytes</StructMemberAlignment>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>AE_Effect.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <ShowProgress>NotSet</ShowProgress>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>
+      </SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(IntDir)/$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+    </Link>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\Debug/VolumetricFractalNoise.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\Headers;..\..\..\Headers\SP;..\..\..\Headers\Win;..\..\..\Resources;..\..\..\Util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <StructMemberAlignment>4Bytes</StructMemberAlignment>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>AE_Effect.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <PreprocessorDefinitions>MSWindows;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <ShowProgress>NotSet</ShowProgress>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>
+      </GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>
+      </SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(IntDir)/$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\VolumetricFractalNoisePiPL.r">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compiling the PiPL</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compiling the PiPL</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl /I "$(ProjectDir)..\..\..\Headers" /EP ".."\\"%(Filename).r" &gt; "$(IntDir)"\\"%(Filename).rr"
+"$(ProjectDir)..\..\..\Resources\PiPLTool" "$(IntDir)%(Filename).rr" "$(IntDir)%(Filename).rrc"
+cl /D "MSWindows" /EP $(IntDir)%(Filename).rrc &gt;               "$(ProjectDir)"\\"%(Filename)".rc
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl /I "$(ProjectDir)..\..\..\Headers" /EP ".."\\"%(Filename).r" &gt; "$(IntDir)"\\"%(Filename).rr"
+"$(ProjectDir)..\..\..\Resources\PiPLTool" "$(IntDir)%(Filename).rr" "$(IntDir)%(Filename).rrc"
+cl /D "MSWindows" /EP $(IntDir)%(Filename).rrc &gt;               "$(ProjectDir)"\\"%(Filename)".rc
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)%(Filename).rc;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)%(Filename).rc;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compiling the PiPL</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compiling the PiPL</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl /I "$(ProjectDir)..\..\..\Headers" /EP ".."\\"%(Filename).r" &gt; "$(IntDir)"\\"%(Filename).rr"
+"$(ProjectDir)..\..\..\Resources\PiPLTool" "$(IntDir)%(Filename).rr" "$(IntDir)%(Filename).rrc"
+cl /D "MSWindows" /EP $(IntDir)%(Filename).rrc &gt;               "$(ProjectDir)"\\"%(Filename)".rc
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl /I "$(ProjectDir)..\..\..\Headers" /EP ".."\\"%(Filename).r" &gt; "$(IntDir)"\\"%(Filename).rr"
+"$(ProjectDir)..\..\..\Resources\PiPLTool" "$(IntDir)%(Filename).rr" "$(IntDir)%(Filename).rrc"
+cl /D "MSWindows" /EP $(IntDir)%(Filename).rrc &gt;               "$(ProjectDir)"\\"%(Filename)".rc
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)%(Filename).rc;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)%(Filename).rc;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VolumetricFractalNoisePiPL.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Util\Smart_Utils.h" />
+    <ClInclude Include="..\AEGLContextStore.h" />
+    <ClInclude Include="..\glbinding\source\glbinding\source\Binding_pch.h" />
+    <ClInclude Include="..\glbinding\source\glbinding\source\callbacks_private.h" />
+    <ClInclude Include="..\glbinding\source\glbinding\source\glrevision.h" />
+    <ClInclude Include="..\glbinding\source\glbinding\source\logging_private.h" />
+    <ClInclude Include="..\glbinding\source\glbinding\source\Meta_Maps.h" />
+    <ClInclude Include="..\glbinding\source\glbinding\source\RingBuffer.h" />
+    <ClInclude Include="..\glbinding\source\glbinding\source\RingBuffer.hpp" />
+    <ClInclude Include="..\GLContext.h" />
+    <ClInclude Include="..\GLRenderer.h" />
+    <ClInclude Include="..\GLRendererManager.h" />
+    <ClInclude Include="..\GLShaderProgram.h" />
+    <ClInclude Include="..\HiddenWindow.h" />
+    <ClInclude Include="..\ParamScoper.h" />
+    <ClInclude Include="..\ShaderCodes.h" />
+    <ClInclude Include="..\Util.h" />
+    <ClInclude Include="..\VolumetricFractalNoise.h" />
+    <ClInclude Include="..\VolumetricFractalNoise_Strings.h" />
+    <ClInclude Include="..\..\..\Headers\A.h" />
+    <ClInclude Include="..\..\..\Headers\AE_Effect.h" />
+    <ClInclude Include="..\..\..\Headers\AE_EffectCB.h" />
+    <ClInclude Include="..\..\..\Headers\AE_EffectCBSuites.h" />
+    <ClInclude Include="..\..\..\Headers\AE_EffectSuites.h" />
+    <ClInclude Include="..\..\..\Util\AE_EffectSuitesHelper.h" />
+    <ClInclude Include="..\..\..\Headers\AE_EffectUI.h" />
+    <ClInclude Include="..\..\..\Headers\AE_GeneralPlug.h" />
+    <ClInclude Include="..\..\..\Headers\AE_GeneralPlugOld.h" />
+    <ClInclude Include="..\..\..\Headers\AE_IO.h" />
+    <ClInclude Include="..\..\..\Headers\AE_Macros.h" />
+    <ClInclude Include="..\..\..\Util\AEFX_ChannelDepthTpl.h" />
+    <ClInclude Include="..\..\..\Util\AEGP_SuiteHandler.h" />
+    <ClInclude Include="..\..\..\Util\entry.h" />
+    <ClInclude Include="..\..\..\Headers\FIEL_Public.h" />
+    <ClInclude Include="..\..\..\Util\Param_Utils.h" />
+    <ClInclude Include="..\..\..\Headers\PF_Masks.h" />
+    <ClInclude Include="..\..\..\Util\String_Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Util\AEGP_SuiteHandler.cpp" />
+    <ClCompile Include="..\..\..\Util\MissingSuiteError.cpp" />
+    <ClCompile Include="..\..\..\Util\Smart_Utils.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\AbstractFunction.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\AbstractValue.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_list.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_0.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_a.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_b.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_c.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_d.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_e.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_f.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_g.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_h.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_i.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_j.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_k.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_l.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_m.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_n.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_o.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_p.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_q.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_r.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_s.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_t.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_u.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_v.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_w.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_x.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_y.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_z.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_pch.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\CallbackMask.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\callbacks.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\ContextHandle.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\ContextInfo.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\FunctionCall.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions-patches.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_0.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_a.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_b.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_c.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_d.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_e.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_f.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_g.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_h.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_i.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_j.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_k.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_l.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_m.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_n.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_o.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_p.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_q.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_r.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_s.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_t.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_u.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_v.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_w.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_x.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_y.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_z.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\types.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\logging.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_BitfieldsByString.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_BooleansByString.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_EnumsByString.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_ExtensionsByFunctionString.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_ExtensionsByString.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_FunctionStringsByExtension.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_getStringByBitfield.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_ReqVersionsByExtension.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_StringsByBitfield.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_StringsByBoolean.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_StringsByEnum.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_StringsByExtension.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\ProcAddress.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Value.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Version.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\Version_ValidVersions.cpp" />
+    <ClCompile Include="..\GLContext.cpp" />
+    <ClCompile Include="..\glm\glm\detail\glm.cpp" />
+    <ClCompile Include="..\GLRenderer.cpp" />
+    <ClCompile Include="..\GLRendererManager.cpp" />
+    <ClCompile Include="..\GLShaderProgram.cpp" />
+    <ClCompile Include="..\HiddenWindow.cpp" />
+    <ClCompile Include="..\ParamScoper.cpp" />
+    <ClCompile Include="..\VolumetricFractalNoise.cpp" />
+    <ClCompile Include="..\VolumetricFractalNoise_Strings.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\glm\glm\detail\func_common.inl" />
+    <None Include="..\glm\glm\detail\func_common_simd.inl" />
+    <None Include="..\glm\glm\detail\func_exponential.inl" />
+    <None Include="..\glm\glm\detail\func_exponential_simd.inl" />
+    <None Include="..\glm\glm\detail\func_geometric.inl" />
+    <None Include="..\glm\glm\detail\func_geometric_simd.inl" />
+    <None Include="..\glm\glm\detail\func_integer.inl" />
+    <None Include="..\glm\glm\detail\func_integer_simd.inl" />
+    <None Include="..\glm\glm\detail\func_matrix.inl" />
+    <None Include="..\glm\glm\detail\func_matrix_simd.inl" />
+    <None Include="..\glm\glm\detail\func_packing.inl" />
+    <None Include="..\glm\glm\detail\func_packing_simd.inl" />
+    <None Include="..\glm\glm\detail\func_trigonometric.inl" />
+    <None Include="..\glm\glm\detail\func_trigonometric_simd.inl" />
+    <None Include="..\glm\glm\detail\func_vector_relational.inl" />
+    <None Include="..\glm\glm\detail\func_vector_relational_simd.inl" />
+    <None Include="..\glm\glm\detail\type_gentype.inl" />
+    <None Include="..\glm\glm\detail\type_half.inl" />
+    <None Include="..\glm\glm\detail\type_mat.inl" />
+    <None Include="..\glm\glm\detail\type_mat2x2.inl" />
+    <None Include="..\glm\glm\detail\type_mat2x3.inl" />
+    <None Include="..\glm\glm\detail\type_mat2x4.inl" />
+    <None Include="..\glm\glm\detail\type_mat3x2.inl" />
+    <None Include="..\glm\glm\detail\type_mat3x3.inl" />
+    <None Include="..\glm\glm\detail\type_mat3x4.inl" />
+    <None Include="..\glm\glm\detail\type_mat4x2.inl" />
+    <None Include="..\glm\glm\detail\type_mat4x3.inl" />
+    <None Include="..\glm\glm\detail\type_mat4x4.inl" />
+    <None Include="..\glm\glm\detail\type_mat4x4_simd.inl" />
+    <None Include="..\glm\glm\detail\type_vec.inl" />
+    <None Include="..\glm\glm\detail\type_vec1.inl" />
+    <None Include="..\glm\glm\detail\type_vec2.inl" />
+    <None Include="..\glm\glm\detail\type_vec3.inl" />
+    <None Include="..\glm\glm\detail\type_vec4.inl" />
+    <None Include="..\glm\glm\detail\type_vec4_simd.inl" />
+    <None Include="..\glm\glm\gtc\bitfield.inl" />
+    <None Include="..\glm\glm\gtc\color_encoding.inl" />
+    <None Include="..\glm\glm\gtc\color_space.inl" />
+    <None Include="..\glm\glm\gtc\constants.inl" />
+    <None Include="..\glm\glm\gtc\epsilon.inl" />
+    <None Include="..\glm\glm\gtc\functions.inl" />
+    <None Include="..\glm\glm\gtc\integer.inl" />
+    <None Include="..\glm\glm\gtc\matrix_access.inl" />
+    <None Include="..\glm\glm\gtc\matrix_inverse.inl" />
+    <None Include="..\glm\glm\gtc\matrix_transform.inl" />
+    <None Include="..\glm\glm\gtc\noise.inl" />
+    <None Include="..\glm\glm\gtc\packing.inl" />
+    <None Include="..\glm\glm\gtc\quaternion.inl" />
+    <None Include="..\glm\glm\gtc\quaternion_simd.inl" />
+    <None Include="..\glm\glm\gtc\random.inl" />
+    <None Include="..\glm\glm\gtc\reciprocal.inl" />
+    <None Include="..\glm\glm\gtc\round.inl" />
+    <None Include="..\glm\glm\gtc\type_precision.inl" />
+    <None Include="..\glm\glm\gtc\type_ptr.inl" />
+    <None Include="..\glm\glm\gtc\ulp.inl" />
+    <None Include="..\glm\glm\gtc\vec1.inl" />
+    <None Include="..\glm\glm\gtx\associated_min_max.inl" />
+    <None Include="..\glm\glm\gtx\bit.inl" />
+    <None Include="..\glm\glm\gtx\closest_point.inl" />
+    <None Include="..\glm\glm\gtx\color_space.inl" />
+    <None Include="..\glm\glm\gtx\color_space_YCoCg.inl" />
+    <None Include="..\glm\glm\gtx\common.inl" />
+    <None Include="..\glm\glm\gtx\compatibility.inl" />
+    <None Include="..\glm\glm\gtx\component_wise.inl" />
+    <None Include="..\glm\glm\gtx\dual_quaternion.inl" />
+    <None Include="..\glm\glm\gtx\euler_angles.inl" />
+    <None Include="..\glm\glm\gtx\extend.inl" />
+    <None Include="..\glm\glm\gtx\extended_min_max.inl" />
+    <None Include="..\glm\glm\gtx\fast_exponential.inl" />
+    <None Include="..\glm\glm\gtx\fast_square_root.inl" />
+    <None Include="..\glm\glm\gtx\fast_trigonometry.inl" />
+    <None Include="..\glm\glm\gtx\float_notmalize.inl" />
+    <None Include="..\glm\glm\gtx\gradient_paint.inl" />
+    <None Include="..\glm\glm\gtx\handed_coordinate_space.inl" />
+    <None Include="..\glm\glm\gtx\hash.inl" />
+    <None Include="..\glm\glm\gtx\integer.inl" />
+    <None Include="..\glm\glm\gtx\intersect.inl" />
+    <None Include="..\glm\glm\gtx\io.inl" />
+    <None Include="..\glm\glm\gtx\log_base.inl" />
+    <None Include="..\glm\glm\gtx\matrix_cross_product.inl" />
+    <None Include="..\glm\glm\gtx\matrix_decompose.inl" />
+    <None Include="..\glm\glm\gtx\matrix_interpolation.inl" />
+    <None Include="..\glm\glm\gtx\matrix_major_storage.inl" />
+    <None Include="..\glm\glm\gtx\matrix_operation.inl" />
+    <None Include="..\glm\glm\gtx\matrix_query.inl" />
+    <None Include="..\glm\glm\gtx\matrix_transform_2d.inl" />
+    <None Include="..\glm\glm\gtx\mixed_product.inl" />
+    <None Include="..\glm\glm\gtx\norm.inl" />
+    <None Include="..\glm\glm\gtx\normal.inl" />
+    <None Include="..\glm\glm\gtx\normalize_dot.inl" />
+    <None Include="..\glm\glm\gtx\number_precision.inl" />
+    <None Include="..\glm\glm\gtx\optimum_pow.inl" />
+    <None Include="..\glm\glm\gtx\orthonormalize.inl" />
+    <None Include="..\glm\glm\gtx\perpendicular.inl" />
+    <None Include="..\glm\glm\gtx\polar_coordinates.inl" />
+    <None Include="..\glm\glm\gtx\projection.inl" />
+    <None Include="..\glm\glm\gtx\quaternion.inl" />
+    <None Include="..\glm\glm\gtx\raw_data.inl" />
+    <None Include="..\glm\glm\gtx\rotate_normalized_axis.inl" />
+    <None Include="..\glm\glm\gtx\rotate_vector.inl" />
+    <None Include="..\glm\glm\gtx\scalar_relational.inl" />
+    <None Include="..\glm\glm\gtx\simd_mat4.inl" />
+    <None Include="..\glm\glm\gtx\simd_quat.inl" />
+    <None Include="..\glm\glm\gtx\simd_vec4.inl" />
+    <None Include="..\glm\glm\gtx\spline.inl" />
+    <None Include="..\glm\glm\gtx\std_based_type.inl" />
+    <None Include="..\glm\glm\gtx\string_cast.inl" />
+    <None Include="..\glm\glm\gtx\transform.inl" />
+    <None Include="..\glm\glm\gtx\transform2.inl" />
+    <None Include="..\glm\glm\gtx\type_aligned.inl" />
+    <None Include="..\glm\glm\gtx\type_trait.inl" />
+    <None Include="..\glm\glm\gtx\vector_angle.inl" />
+    <None Include="..\glm\glm\gtx\vector_query.inl" />
+    <None Include="..\glm\glm\gtx\wrap.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{b69af876-1d29-49fa-9917-fd2efa165225}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{e1cf207c-552f-4fd4-96ed-76ccc9ebdf72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\AE">
+      <UniqueIdentifier>{728b7ff5-0e0a-45d2-999a-696b548f9a28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Supporting code">
+      <UniqueIdentifier>{f2f05dcb-eed5-4aa5-b2d0-504449ce3cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glbinding">
+      <UniqueIdentifier>{871df624-17de-462f-b7ab-8ce83115c473}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glbinding\gl">
+      <UniqueIdentifier>{7a53131c-9e47-42ef-bc01-edc39346e971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glm">
+      <UniqueIdentifier>{7522464f-0935-49be-aed4-380dd6fafa45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glm\detail">
+      <UniqueIdentifier>{2aba14d1-54e5-4ca3-b120-e3ff9814ad80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glm\gtx">
+      <UniqueIdentifier>{9d8ddaf9-b52c-4a79-adbf-2d4ca3abd959}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glm\gtc">
+      <UniqueIdentifier>{dc9c7472-43dc-49fc-acc1-4656cd19bf7f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Headers\A.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Headers\AE_Effect.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Headers\AE_EffectCB.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Headers\AE_EffectCBSuites.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Headers\AE_EffectSuites.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Util\AE_EffectSuitesHelper.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Headers\AE_EffectUI.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Headers\AE_GeneralPlug.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Headers\AE_GeneralPlugOld.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Headers\AE_IO.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Headers\AE_Macros.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Util\AEFX_ChannelDepthTpl.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Util\AEGP_SuiteHandler.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Util\entry.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Headers\FIEL_Public.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Util\Param_Utils.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Headers\PF_Masks.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Util\String_Utils.h">
+      <Filter>Headers\AE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VolumetricFractalNoise.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VolumetricFractalNoise_Strings.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Util\Smart_Utils.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AEGLContextStore.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GLContext.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HiddenWindow.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Util.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GLShaderProgram.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GLRenderer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glbinding\source\glbinding\source\RingBuffer.h">
+      <Filter>glbinding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glbinding\source\glbinding\source\RingBuffer.hpp">
+      <Filter>glbinding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glbinding\source\glbinding\source\Binding_pch.h">
+      <Filter>glbinding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glbinding\source\glbinding\source\callbacks_private.h">
+      <Filter>glbinding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glbinding\source\glbinding\source\glrevision.h">
+      <Filter>glbinding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glbinding\source\glbinding\source\logging_private.h">
+      <Filter>glbinding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glbinding\source\glbinding\source\Meta_Maps.h">
+      <Filter>glbinding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GLRendererManager.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ParamScoper.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ShaderCodes.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Util\AEGP_SuiteHandler.cpp">
+      <Filter>Supporting code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Util\MissingSuiteError.cpp">
+      <Filter>Supporting code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VolumetricFractalNoise.cpp" />
+    <ClCompile Include="..\VolumetricFractalNoise_Strings.cpp" />
+    <ClCompile Include="..\..\..\Util\Smart_Utils.cpp">
+      <Filter>Supporting code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GLContext.cpp" />
+    <ClCompile Include="..\HiddenWindow.cpp" />
+    <ClCompile Include="..\GLShaderProgram.cpp" />
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_0.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_a.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_b.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_c.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_d.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_e.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_f.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_g.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_h.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_i.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_j.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_k.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_l.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_m.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_n.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_o.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_p.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_q.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_r.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_s.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_t.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_u.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_v.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_w.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_x.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_y.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions_z.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\functions-patches.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\gl\types.cpp">
+      <Filter>glbinding\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_ReqVersionsByExtension.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_StringsByBitfield.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_StringsByBoolean.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_StringsByEnum.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_StringsByExtension.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\ProcAddress.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Value.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Version.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Version_ValidVersions.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\AbstractFunction.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\AbstractValue.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_list.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_0.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_a.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_b.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_c.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_d.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_e.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_f.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_g.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_h.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_i.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_j.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_k.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_l.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_m.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_n.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_o.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_p.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_q.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_r.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_s.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_t.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_u.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_v.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_w.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_x.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_y.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_objects_z.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Binding_pch.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\CallbackMask.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\callbacks.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\ContextHandle.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\ContextInfo.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\FunctionCall.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\logging.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_BitfieldsByString.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_BooleansByString.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_EnumsByString.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_ExtensionsByFunctionString.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_ExtensionsByString.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_FunctionStringsByExtension.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\glbinding\source\glbinding\source\Meta_getStringByBitfield.cpp">
+      <Filter>glbinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GLRenderer.cpp" />
+    <ClCompile Include="..\GLRendererManager.cpp" />
+    <ClCompile Include="..\glm\glm\detail\glm.cpp">
+      <Filter>glm\detail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ParamScoper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\VolumetricFractalNoisePiPL.r">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VolumetricFractalNoisePiPL.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\glm\glm\detail\func_common.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_common_simd.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_exponential.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_exponential_simd.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_geometric.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_geometric_simd.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_integer.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_integer_simd.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_matrix.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_matrix_simd.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_packing.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_packing_simd.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_trigonometric.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_trigonometric_simd.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_vector_relational.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\func_vector_relational_simd.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_gentype.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_half.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_mat.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_mat2x2.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_mat2x3.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_mat2x4.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_mat3x2.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_mat3x3.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_mat3x4.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_mat4x2.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_mat4x3.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_mat4x4.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_mat4x4_simd.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_vec.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_vec1.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_vec2.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_vec3.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_vec4.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\detail\type_vec4_simd.inl">
+      <Filter>glm\detail</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\spline.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\std_based_type.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\string_cast.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\transform.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\transform2.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\type_aligned.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\type_trait.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\vector_angle.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\vector_query.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\wrap.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\associated_min_max.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\bit.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\closest_point.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\color_space.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\color_space_YCoCg.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\common.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\compatibility.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\component_wise.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\dual_quaternion.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\euler_angles.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\extend.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\extended_min_max.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\fast_exponential.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\fast_square_root.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\fast_trigonometry.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\float_notmalize.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\gradient_paint.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\handed_coordinate_space.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\hash.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\integer.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\intersect.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\io.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\log_base.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\matrix_cross_product.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\matrix_decompose.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\matrix_interpolation.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\matrix_major_storage.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\matrix_operation.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\matrix_query.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\matrix_transform_2d.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\mixed_product.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\norm.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\normal.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\normalize_dot.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\number_precision.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\optimum_pow.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\orthonormalize.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\perpendicular.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\polar_coordinates.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\projection.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\quaternion.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\raw_data.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\rotate_normalized_axis.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\rotate_vector.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\scalar_relational.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\simd_mat4.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\simd_quat.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtx\simd_vec4.inl">
+      <Filter>glm\gtx</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\bitfield.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\color_encoding.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\color_space.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\constants.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\epsilon.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\functions.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\integer.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\matrix_access.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\matrix_inverse.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\matrix_transform.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\noise.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\packing.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\quaternion.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\quaternion_simd.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\random.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\reciprocal.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\round.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\type_precision.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\type_ptr.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\ulp.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+    <None Include="..\glm\glm\gtc\vec1.inl">
+      <Filter>glm\gtc</Filter>
+    </None>
+  </ItemGroup>
+</Project>
